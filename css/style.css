@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.btn-agregar{
+  font-size: 25px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.btn-agregar:hover{
+  color: green;
+}
+.btn-actualizar{
+  font-size: 25px;
+  cursor: pointer;
+}
+.btn-eliminar{
+  font-size: 25px;
+  cursor: pointer;
+}
+.barnav{
+  height: 50px;
+  background: #709083;
+}
+.cabecera{
+  position: sticky;
+  top: 50px;
+  z-index: 1020;
+}
+.font-gv{
+  font-family: 'Great Vibes', cursive!important;
+}
+.cursor-p{
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-weight: bolder;
+}
+th{
+  background-color: #1D636B!important;
+  color: #FFFFFF;
+}
+.bodyt{
+  margin: 0;
+  padding: 0;
+}
+@media(max-width: 887px){
+  .log{
+    display: none;
+  }
+  .btn-agregar{
+    width: 100%;
+    padding: 0;
+  }
+  .bbnv{
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 542px) {
+  .cpb{
+    width: min-content;
+  }
+}
