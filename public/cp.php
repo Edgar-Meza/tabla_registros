@@ -1,9 +1,8 @@
 <?php
+      include('variables.php');
       session_start();
       if($_SESSION['token'] !== 'Validado'){
         dead();
-      }else {
-        session_destroy();
       }
       include('config/db.php');
       include('config/agregar.php');
@@ -31,12 +30,18 @@
         <div class="container-fluid row bbnv">
           <div class="col-lg-1 col-md-1 col-sm-12 text-center log">
             <div class="text-center texto-1 cursor-p font-gv" id="fh5co-logo">
-							<span style="vertical-align: super;">G</span>
+							<span style="vertical-align: super;">E</span>
 							<span style="vertical-align: sub;">M</span>
 						</div>
           </div>
           <div class="col-lg-11 col-md-11 col-sm-12 text-center btn-agregar" onclick="nuevo()">
             <span class="bi-plus-circle" data-bs-toggle="modal" data-bs-target="#datos"></span>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 bt-cerrar">
+            <form action="auth.php" method="post">
+              <label class="bi-box-arrow-right btn-c" for="cerrar"></label>
+              <input class="d-none" type="submit" name="cerrar" value="cerrar" id="cerrar">
+            </form>
           </div>
         </div>
       </nav>
@@ -45,10 +50,10 @@
           <thead class="cabecera table-light">
             <tr>
               <th scope="col">id</th>
-              <th scope="col">nombre</th>
-              <th scope="col">N° Invitados</th>
-              <th scope="col">Relación</th>
-              <th scope="col">Estado</th>
+              <th scope="col">col1</th>
+              <th scope="col">col2</th>
+              <th scope="col">col3</th>
+              <th scope="col">col4</th>
               <th scope="col" class="text-center">Editar</th>
               <th scope="col" class="text-center">Eliminar</th>
             </tr>
@@ -56,7 +61,7 @@
           <tbody style="border-style: hidden">
               <?php
 
-                $datostab = "SELECT * FROM invitados order by id_invitado";
+                $datostab = "SELECT * FROM registros order by id DESC";
                 $ejecutar = mysqli_query($conexion, $datostab);
 
                 while($tabla = mysqli_fetch_array($ejecutar)){
@@ -84,20 +89,20 @@
           <div class="modal-body">
             <form class="form" method="post">
               <div class="form-group">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" name="nombre" id="nombre" class="form-control" oninput="d_nombre()">
+                <label for="col1" class="form-label">col1</label>
+                <input type="text" name="col1" id="col1" class="form-control" oninput="d_col1()">
               </div>
               <div class="form-group">
-                <label for="apellidos" class="form-label">Numero</label>
-                <input type="text" name="numero" id="numero" class="form-control" oninput="d_apellidos()">
+                <label for="col2" class="form-label">col2</label>
+                <input type="text" name="col2" id="col2" class="form-control" oninput="d_col2()">
               </div>
               <div class="form-group">
-                <label for="edad" class="form-label">Relacion</label>
-                <input type="text" name="relacion" id="relacion" class="form-control" oninput="d_edad()">
+                <label for="col3" class="form-label">col3</label>
+                <input type="text" name="col3" id="col3" class="form-control" oninput="d_col3()">
               </div>
               <div class="form-group">
-                <label for="correo" class="form-label">estado</label>
-                <input type="text" name="estado" id="estado" class="form-control" oninput="d_correo()">
+                <label for="col4" class="form-label">col4</label>
+                <input type="text" name="col4" id="col4" class="form-control" oninput="d_col4()">
               </div>
             </form>
           </div>
@@ -105,10 +110,10 @@
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             <form method="post">
               <input type="hidden" name="idup" id="idup">
-              <input type="hidden" id="nombred" name="nombred">
-              <input type="hidden" id="numerod" name="numerod">
-              <input type="hidden" id="relaciond" name="relaciond">
-              <input type="hidden" id="estadod" name="estadod">
+              <input type="hidden" id="col1d" name="col1d">
+              <input type="hidden" id="col2d" name="col2d">
+              <input type="hidden" id="col3d" name="col3d">
+              <input type="hidden" id="col4d" name="col4d">
               <input type="submit" class="btn btn-success" name="guardar" value="Guardar" id="save">
               <input type="submit" class="btn btn-success" name="actualizar" value="Actualizar" style="display:none" id="update">
             </form>

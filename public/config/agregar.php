@@ -1,10 +1,10 @@
 <?php
   if(isset($_POST['guardar'])){
-    $nombre = $_POST['nombred'];
-    $numero = $_POST['numerod'];
-    $relacion = $_POST['relaciond'];
-    $estado = $_POST['estadod'];
+    $col1 = $_POST['col1d'];
+    $col2 = $_POST['col2d'];
+    $col3 = $_POST['col3d'];
+    $col4 = $_POST['col4d'];
 
-    $agregar = mysqli_query($conexion, "INSERT INTO invitados VALUES(null, '".$nombre."',".$numero.",'".$relacion."','".$estado."')");
+    $agregar = mysqli_query($conexion, "INSERT INTO registros VALUES(null, '".$col1."',".$col2.",'".$col3."','".$col4."')");
   }
  ?>

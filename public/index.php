@@ -21,7 +21,7 @@
     <div class="code">
       <form action="auth.php" method="post">
         <div class="text-ce texto-1 cursor-p font-gv" id="fh5co-logo">
-          <span style="vertical-align: super;">G</span>
+          <span style="vertical-align: super;">E</span>
           <span style="vertical-align: sub;">M</span>
         </div>
         <div class="error" id="error">

@@ -1,7 +1,7 @@
 <?php
+  session_start();
   if(isset($_POST['codigo'])){
     $codigo = $_POST['codigo'];
-    session_start();
     if($codigo == 'codigo_acceso'){
       $_SESSION['token'] = 'Validado';
       header('Location:cp.php');
@@ -12,5 +12,9 @@
         history.back();
       </script>";
     }
+  }
+  if(isset($_POST['cerrar'])){
+    session_destroy();
+    header('Location:index.php');
   }
  ?>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 .btn-agregar{
   font-size: 25px;
@@ -18,7 +18,7 @@
 }
 .barnav{
   height: 50px;
-  background: #709083;
+  background: #000000;
 }
 .cabecera{
   position: sticky;
@@ -26,7 +26,7 @@
   z-index: 1020;
 }
 .font-gv{
-  font-family: 'Great Vibes', cursive!important;
+  font-family: 'Orbitron', sans-serif!important;
 }
 .cursor-p{
   font-size: 20px;
@@ -38,7 +38,7 @@
   font-weight: bolder;
 }
 th{
-  background-color: #1D636B!important;
+  background-color: #2d2929!important;
   color: #FFFFFF;
 }
 .bodyt{
@@ -77,7 +77,7 @@ th{
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   width: 25vw;
-  height: 40vh;
+  height: 250px;
   margin: auto;
   margin-top: 25vh;
 }
@@ -120,4 +120,13 @@ th{
     width: 60vw;
     height: 280px;
   }
+}
+.bt-cerrar{
+  position: absolute;
+  right: 0;
+  color: #FFFFFF;
+  font-size: 25px;
+}
+.btn-c{
+  cursor: pointer;
 }

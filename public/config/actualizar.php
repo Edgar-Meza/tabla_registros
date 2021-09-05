@@ -2,12 +2,12 @@
 
   if(isset($_POST['actualizar'])){
     $idr = $_POST['idup'];
-    $nombre = $_POST['nombred'];
-    $numero = $_POST['numerod'];
-    $relacion = $_POST['relaciond'];
-    $estado = $_POST['estadod'];
+    $col1 = $_POST['col1d'];
+    $col2 = $_POST['col2d'];
+    $col3 = $_POST['col3d'];
+    $col4 = $_POST['col4d'];
 
-    $consulta = "UPDATE invitados SET nombre='".$nombre."', num_acompanantes=".$numero.", friendship='".$relacion."', estado='".$estado."' WHERE id_invitado=".$idr."";
+    $consulta = "UPDATE registros SET col1v='".$col1."', col2n=".$col2.", col3v='".$col3."', col4v='".$col4."' WHERE id=".$idr."";
 
     $agregar = mysqli_query($conexion, $consulta);
   }
